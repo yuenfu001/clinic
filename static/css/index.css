@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color:rgba(12, 69, 138);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #47c1f5;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight:lighter;
+  font-size:large;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(12, 69, 138);
+  color: rgb(247, 247, 247);
+}
