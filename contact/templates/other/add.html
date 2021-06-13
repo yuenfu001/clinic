@@ -2,6 +2,22 @@
 {% block title %}
 Contact
 {% endblock %}
+{% load crispy_forms_tags %}
 {% block content %}
+{% if user.is_authenticated %}
+<br>
+<h5>welcome {{user}}</h5>
+<h3>ADD PATIENT CONTACT</h3>
+<br>
+<div class="form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{add|crispy}} <br>
+        <input type="submit" value="Add" id="add">
+    </form>
+</div>
+{% else %}
+<br>
 
+{% endif %}
 {% endblock %}

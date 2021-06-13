@@ -11,7 +11,7 @@ class Contact(models.Model):
     date_updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     class Meta:
-        ordering = ['date_updated']
+        ordering = ['-date_updated']
         verbose_name = "Register"
         verbose_name_plural = "Contacts"
 

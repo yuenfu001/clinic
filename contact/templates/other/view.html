@@ -1,0 +1,27 @@
+{% extends 'base/home.html' %}
+{% block title %}
+View Info
+{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<br>
+<div class="form1">
+    {% for i in view %}
+  
+    Full Name: {{i.name}}
+    <br>
+    Patient ID: {{i.patient_id}}
+    <br>
+    Age: {{i.age}}
+    <br>
+    Phone Number: {{i.phone_number}}
+    <br>
+    Age: {{i.address}}
+    {% endfor %}
+</div>
+{% else %}
+<div class="form1">
+    Your are not authorized to view this page
+</div>
+{% endif %}
+{% endblock %}

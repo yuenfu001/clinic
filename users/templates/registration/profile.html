@@ -1,0 +1,15 @@
+{% extends 'base/home.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<p>
+<div class="container">
+    <form method="POST" action="{% url 'login' %}" class="form-group">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="Update">
+
+    </form>
+</div>
+</p>
+{% endblock %}

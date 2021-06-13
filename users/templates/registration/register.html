@@ -1,0 +1,23 @@
+{% extends 'base/home.html' %}
+
+{% block content %}
+{% if not user.is_authenticated %}
+{% load crispy_forms_tags %}
+
+<div class="item2">
+
+
+    <div class="container">
+        <h2>Sign up</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form|crispy}}
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</div>
+{% else %}
+You can't access this page if logged in
+{% endif %}
+{% endblock %}

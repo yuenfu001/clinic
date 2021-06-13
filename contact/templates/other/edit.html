@@ -1,0 +1,25 @@
+{% extends 'base/home.html' %}
+{% block title %}
+Edit Contact
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<br>
+<h5>welcome {{user}}</h5>
+<h3>UPDATE PATIENT CONTACT</h3>
+<br>
+<div class="form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{edit_form|crispy}} <br>
+        <input type="submit" value="Update" id="update">
+    </form>
+</div>
+{% else %}
+<div class="form">
+    You are not authorized to view this page
+</div>
+{% endif %}
+{% endblock %}

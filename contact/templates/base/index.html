@@ -2,5 +2,51 @@
 {% block title %}
 Home
 {% endblock %}
+
 {% block content %}
+{% if user.is_authenticated %}
+{% if messages %}
+<ul class="messages">
+    {% for Q in messages %}
+    <li{% if Q.tags %} class="{{Q.tags}}" {% endif %}> {{Q}} </li>
+        {% endfor %}
+</ul>
+{% endif %}
+<br>
+<h5>welcome {{user}}</h5>
+<h3>Search Bar</h3>
+
+<br>
+{% for i in contact %}
+<div class="form1">
+    Full Name: {{i.name}}
+    <br>
+    Phone Number: {{i.phone_number}}
+    <br>
+    Age: {{i.age}}
+
+
+
+    <div class="more-1">
+        <a href="{% url 'view' i.id %}">View Info</a>
+        /
+        <a href="{% url 'edit' i.id %}">Edit</a>
+        /
+        <a href="{% url 'delete' i.id %}">delete</a>
+    </div>
+    <div class="date">
+
+        last updated on {{i.date_updated}} by {{user}}
+    </div>
+
+</div>
+{% endfor %}
+
+{% else %}
+<br>
+<h3>this is a webpage for a dental clinic
+</h3>
+
+{% endif %}
+
 {% endblock %}
