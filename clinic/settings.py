@@ -24,8 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #dotenv_file = os.path.join(BASE_DIR, ".env")
 #if os.path.isfile(dotenv_file):
 #    dotenv.load_dotenv(dotenv_file)
-#SECRET_KEY = os.environ["CLINIC"]    
-SECRET_KEY = "django-insecure-po2b)4(yrju(08$^1-mn091_$bgn$$#wkxu7v)1#3z-gxbuc7d"
+#SECRET_KEY = os.environ["CLINIC"] 
+SECRET_KEY ="django-insecure-po2b)4(yrju(08$^1-mn091_$bgn$$#wkxu7v)1#3z-gxbuc7d"
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
