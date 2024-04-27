@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color:rgba(12, 69, 138);
+  background-color:rgba(46, 132, 236, 0.7);
+ 
 }
 
 ul {
@@ -15,6 +16,7 @@ ul {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight:lighter;
   font-size:large;
+  box-shadow: 20px 20px 50px 10px rgb(223, 250, 169) inset;
 }
 
 li a {
@@ -30,7 +32,7 @@ li a.active {
 }
 
 li a:hover:not(.active) {
-  background-color: rgba(12, 69, 138);
+  background-color:rgba(46, 132, 236, 0.7);
   color: rgb(247, 247, 247);
 }
 
@@ -41,11 +43,12 @@ li a:hover:not(.active) {
   padding: 20px;
   border-radius: 1rem;
   background-size: 10px;
-  background-color: #4bc1f3cb;
+  background-color: #4bc1f321;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size:10px;
   font-weight:bold;
-  color:#f5f5f5;
+  color:#050505;
+  box-shadow: 20px 20px 50px 10px rgb(192, 255, 233) inset;
 }
 #add{
   font-size: 15px;
@@ -63,6 +66,7 @@ li a:hover:not(.active) {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size:10px;
   font-weight:lighter;
+  box-shadow: 20px 20px 50px 10px rgb(192, 255, 233) inset;
 }
 .more{
   margin-left: 80%;

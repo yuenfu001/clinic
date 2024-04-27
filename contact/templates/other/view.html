@@ -8,13 +8,15 @@ View Info
 <div class="form1">
     {% for i in view %}
   
-    Full Name: {{i.name}}
+    Full Name: {{i.full_name}}
     <br>
-    Patient ID: {{i.patient_id}}
+    Patient ID: {{i.card_ID}}
+    <br>
+    Age: {{i.sex}}
     <br>
     Age: {{i.age}}
     <br>
-    Phone Number: {{i.phone_number}}
+    Phone Number: {{i.tel}}
     <br>
     Age: {{i.address}}
     {% endfor %}

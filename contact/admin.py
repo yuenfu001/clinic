@@ -4,7 +4,7 @@ from .forms import *
 # Register your models here.
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name',"patient_id","age","phone_number","address")
+    list_display = ('full_name',"card_ID","sex","age","tel","address")
     form = ContactCreateForm
 
 admin.site.register(Contact,ContactAdmin)

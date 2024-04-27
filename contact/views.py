@@ -9,9 +9,14 @@ from .forms import *
 # Create your views here.
 def Home(request):
     contact = Contact.objects.all()
+    form = SearchContactForm(request.POST or None)
     context = {
         "contact": contact,
+        "search":form
     }
+    if request.method=="POST":
+        contact = Contact.objects.filter(tel__icontains=form["tel"].value())
+
     return render(request, "base/index.html", context)
 
 

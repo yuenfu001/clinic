@@ -4,6 +4,7 @@ Home
 {% endblock %}
 
 {% block content %}
+{% load crispy_forms_tags %}
 {% if user.is_authenticated %}
 {% if messages %}
 <ul class="messages">
@@ -14,32 +15,42 @@ Home
 {% endif %}
 <br>
 <h5>welcome {{user}}</h5>
-<h3>Search Bar</h3>
+<div class="form1">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{search|crispy}}
+        <br>
+        <input type="submit" value="Search">
+
+    </form>
+
+</div>
 
 <br>
 {% for i in contact %}
+<a href="{% url 'view' i.id %}">
 <div class="form1">
-    Full Name: {{i.name}}
+    Full Name: {{i.full_name}}
     <br>
-    Phone Number: {{i.phone_number}}
+    Phone Number: {{i.tel}}
     <br>
-    Age: {{i.age}}
+    Gender: {{i.sex}}
 
 
 
-    <div class="more-1">
-        <a href="{% url 'view' i.id %}">View Info</a>
-        /
+    
         <a href="{% url 'edit' i.id %}">Edit</a>
         /
         <a href="{% url 'delete' i.id %}">delete</a>
     </div>
+
     <div class="date">
 
         last updated on {{i.date_updated}} by {{user}}
     </div>
 
-</div>
+
+</a>
 <br>
 {% endfor %}
 
